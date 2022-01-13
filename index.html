@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="marvelApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Marvel</title>
+	<base href="/">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="/assets/css/app.css">
+
+	<script src="/assets/libs/jquery/jquery.min.js"></script>
+	<script src="/assets/libs/angularjs/angular.min.js"></script>
+	<script src="/assets/libs/angularjs-route/angular-route.min.js"></script>
+	<script src="/assets/libs/angularjs-resource/angular-resource.min.js"></script>
+
+</head>
+<body>
+
+<div>
+
+	<ng-view></ng-view>
+
+</div>
+
+<script src="/app/app.module.js"></script>
+
+<script src="/app/views/list/list.controller.js"></script>
+<script src="/app/views/detail/detail.controller.js"></script>
+
+<script src="/app/app.routes.js"></script>
+
+</body>
+</html>
