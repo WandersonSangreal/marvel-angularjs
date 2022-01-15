@@ -1,8 +1,6 @@
 'use strict';
 
-var appMarvel = angular.module('marvelApp', ['ngRoute', 'ngResource']);
-
-// appMarvel
+const appMarvel = angular.module('marvelApp', ['ngRoute', 'ngResource']);
 
 appMarvel.controller('mainController', function ($scope) {
 	// $scope.name = $routeParams.id;

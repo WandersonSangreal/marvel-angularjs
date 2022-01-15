@@ -1,0 +1,17 @@
+<div class="col-sm-3 mb-4">
+	<div class="card">
+
+		<iloading index="{{ index }}"></iloading>
+		<div class="card-img-top text-center">
+			<img ng-src="{{ thumbnail }}" class="rounded-circle" alt="{{ character.name }}" iload="{{ index }}">
+		</div>
+
+		<div class="card-body text-center">
+			<h5 class="card-title">{{ character.name }}</h5>
+			<p class="card-text">{{ character.description || 'Sem descrição disponível' }}</p>
+			<a class="btn btn-link" ng-href="detail/{{ character.id }}">
+				<i class="fas fa-book-open"></i>
+			</a>
+		</div>
+	</div>
+</div>

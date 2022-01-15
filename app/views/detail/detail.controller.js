@@ -1,5 +1,7 @@
 'use strict';
 
 appMarvel.controller('detailController', function ($scope, $routeParams) {
-	// $scope.name = $routeParams.id;
+	$scope.id = $routeParams.character;
+
+	console.log($scope.id);
 });
