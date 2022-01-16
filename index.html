@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="marvelApp">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Marvel</title>
@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<div id="main">
+<div id="main" ng-app="marvelApp">
 
 	<div id="brand">
 
@@ -60,13 +60,14 @@
 
 <script src="/app/app.routes.js"></script>
 
-<script src="/app/views/list/list.controller.js"></script>
-<script src="/app/views/detail/detail.controller.js"></script>
-
 <script src="/app/services/api.service.js"></script>
 
 <script src="/app/components/iloader/iloader.js"></script>
+<script src="/app/components/pagination/pagination.component.js"></script>
 <script src="/app/components/card/card.component.js"></script>
+
+<script src="/app/views/list/list.controller.js"></script>
+<script src="/app/views/detail/detail.controller.js"></script>
 
 </body>
 </html>

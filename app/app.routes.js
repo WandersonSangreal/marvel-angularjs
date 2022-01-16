@@ -17,7 +17,7 @@ appMarvel.config(function ($httpProvider) {
 appMarvel.config(function ($routeProvider) {
 	$routeProvider
 		.when("/", {
-			name: 'list',
+			name: "list",
 			templateUrl: "/app/views/list/list.view.html",
 			controller: "listController",
 			resolve: {
@@ -31,7 +31,7 @@ appMarvel.config(function ($routeProvider) {
 			}
 		})
 		.when("/detail/:character", {
-			name: 'detail',
+			name: "detail",
 			templateUrl: "/app/views/detail/detail.view.html",
 			controller: "detailController",
 			resolve: {

@@ -1,3 +1,6 @@
-<div class="row">
+<div class="row" ng-if="characters.length">
 	<card ng-repeat="character in characters track by $index" character="character" index="$index"></card>
+</div>
+<div class="row" ng-if="characters.length">
+	<pagination total="pagination.total" items="pagination.items" page="pagination.page" change="setPage"></pagination>
 </div>

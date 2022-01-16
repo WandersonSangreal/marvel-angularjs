@@ -1,0 +1,40 @@
+<div class="row">
+	<nav aria-label="Pagination">
+		<ul class="pagination justify-content-center">
+
+			<li class="page-item" ng-class="{'disabled': pages[0] == page}" ng-disabled="pages[0] == page"
+			    ng-click="change(page - 1);">
+				<a class="page-link" href="javascript:void(0);">
+					Anterior
+				</a>
+			</li>
+
+			<li class="page-item" ng-class="{'active': pages[0] == page}" ng-click="change(pages[0]);">
+				<a class="page-link" href="javascript:void(0);">{{ pages[0] }}</a>
+			</li>
+
+			<li class="page-item" ng-if="startPage != 1" ng-click="change(page - 1);">
+				<a class="page-link" href="javascript:void(0);">...</a>
+			</li>
+
+			<li class="page-item" ng-repeat="pg in pages | limitTo:size:startPage" ng-class="{'active': pg == page}"
+			    ng-click="change(pg);">
+				<a class="page-link" href="javascript:void(0);">{{ pg }}</a>
+			</li>
+
+			<li class="page-item" ng-click="change(page + 1);">
+				<a class="page-link" href="javascript:void(0);">...</a>
+			</li>
+
+			<li class="page-item" ng-class="{'active': pages.length == page}" ng-click="change(pages.length);">
+				<a class="page-link" href="javascript:void(0);">{{ pages.length }}</a>
+			</li>
+
+			<li class="page-item" ng-class="{'disabled': pages.length == page}" ng-disabled="pages.length == page"
+			    ng-click="change(page + 1);">
+				<a class="page-link" href="javascript:void(0);">Próxima</a>
+			</li>
+		</ul>
+	</nav>
+
+</div>

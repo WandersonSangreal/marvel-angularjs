@@ -6,14 +6,14 @@ appMarvel.directive('iloading', function ($rootScope, $timeout) {
 
 			function die() {
 				$timeout(function () {
-					scope.$destroy();
+					// scope.$destroy();
 					element.remove();
 				});
 			}
 
 			function error() {
 				$timeout(function () {
-					scope.$destroy();
+					// scope.$destroy();
 				});
 			}
 

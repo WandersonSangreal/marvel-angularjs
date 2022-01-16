@@ -70,11 +70,27 @@
 }
 
 .btn-link {
-	color: #dc3545;
+	color: #ec1d24;
 }
 
 .btn-link:hover {
 	color: #bb2d3b;
+}
+
+.page-item .page-link {
+	color: white;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.page-item.disabled .page-link {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.page-item.active .page-link {
+	border-color: #ec1d24;
+	background-color: #ec1d24;
 }
 
 .iplace {
