@@ -1,3 +1,19 @@
+<div class="row justify-content-center">
+	<div class="col-sm-4">
+		<form ng-submit="setSearch()">
+			<div class="input-group mt-3 mb-5">
+				<input type="search" id="search" ng-keyup="verifyClearSearch()"
+				       ng-change="verifyClearSearch()" ng-model="search"
+				       class="form-control form-control-lg rounded-pill rounded-end border-2"
+				       placeholder="Pesquisar" aria-describedby="button-addon">
+				<button class="btn btn-outline-light rounded-pill rounded-start border-2 search-button pe-3"
+				        type="submit" id="button-addon">
+					<i class="fas fa-search"></i>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
 <div class="row" ng-if="characters.length">
 	<card ng-repeat="character in characters track by $index" character="character" index="$index"></card>
 </div>

@@ -77,6 +77,22 @@
 	color: #bb2d3b;
 }
 
+.input-group input#search {
+	color: white;
+	border-right: none;
+	background-color: transparent;
+}
+
+.input-group .search-button {
+	border-left: none;
+}
+
+.input-group .search-button:hover {
+	color: white;
+	background-color: transparent;
+}
+
+
 .page-item .page-link {
 	color: white;
 	background-color: transparent;

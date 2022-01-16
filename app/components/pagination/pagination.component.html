@@ -22,11 +22,12 @@
 				<a class="page-link" href="javascript:void(0);">{{ pg }}</a>
 			</li>
 
-			<li class="page-item" ng-click="change(page + 1);">
+			<li class="page-item" ng-click="change(page + 1);" ng-if="pages.length > size">
 				<a class="page-link" href="javascript:void(0);">...</a>
 			</li>
 
-			<li class="page-item" ng-class="{'active': pages.length == page}" ng-click="change(pages.length);">
+			<li class="page-item" ng-class="{'active': pages.length == page}" ng-click="change(pages.length);"
+			    ng-if="pages.length > size">
 				<a class="page-link" href="javascript:void(0);">{{ pages.length }}</a>
 			</li>
 

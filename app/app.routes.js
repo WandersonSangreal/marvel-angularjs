@@ -24,8 +24,9 @@ appMarvel.config(function ($routeProvider) {
 				characters: function (apiService) {
 
 					const offset = sessionStorage.getItem('offset') || undefined;
+					const search = sessionStorage.getItem('search') || undefined;
 
-					return apiService.get('characters', offset);
+					return apiService.get('characters', offset, search);
 
 				}
 			}
@@ -38,8 +39,9 @@ appMarvel.config(function ($routeProvider) {
 				character: function (apiService, $route) {
 
 					const offset = sessionStorage.getItem('offset') || undefined;
+					const search = sessionStorage.getItem('search') || undefined;
 
-					return apiService.get('characters/' + $route.current.params.character, offset);
+					return apiService.get('characters/' + $route.current.params.character, offset, search);
 
 				}
 			}
