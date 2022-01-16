@@ -21,6 +21,7 @@
 
 #main > #body {
 	overflow-y: auto;
+	overflow-x: hidden;
 	padding-bottom: 2rem;
 }
 
