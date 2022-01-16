@@ -7,14 +7,13 @@ appMarvel.service('apiService', function ($http) {
 		credentials: {
 			apikey: '5a237863b3cc2061003cbbc4fe20dc06',
 			ts: '1641665714440',
-			hash: 'e5116ac2dbdaa8d6fb1642631fde2588',
-			limit: '20',
+			hash: 'e5116ac2dbdaa8d6fb1642631fde2588'
 		}
 	};
 
 	this.get = function get(tail, offset, search) {
 
-		let url = new URL(config.url + tail);
+		let url = new URL((RegExp('^(https?:)?//').test(tail) ? tail : config.url + tail));
 
 		if (offset) {
 			sessionStorage.setItem('offset', String(offset));
@@ -28,7 +27,7 @@ appMarvel.service('apiService', function ($http) {
 
 		return $http
 			.get(url.toString(), {params: config.credentials})
-			.then(function (response) {
+			.then((response) => {
 				return response.data;
 			});
 	}

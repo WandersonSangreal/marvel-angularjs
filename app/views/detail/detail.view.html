@@ -1,1 +1,35 @@
-Detail
+<div class="row justify-content-center">
+
+	<div class="col-sm-12 text-center mb-lg-4">
+		<iloading index="{{ character.id }}"></iloading>
+		<img ng-src="{{ thumbnail }}" class="rounded-circle img-thumbnail" alt="{{ character.name }}"
+		     iload="{{ character.id }}">
+	</div>
+
+	<div class="col-sm-12 text-center mb-lg-4">
+		<h1>{{ character.name }}</h1>
+	</div>
+
+	<div class="col-sm-12 text-center mb-lg-2">
+		<p>{{ character.description || 'Sem descrição disponível' }}</p>
+	</div>
+
+	<div class="col-sm-12 text-center mb-lg-4">
+		<a href="/" class="btn btn-danger">Voltar</a>
+	</div>
+
+	<h2 class="text-center">Quadrinhos</h2>
+
+	<div class="row justify-content-center">
+
+		<div class="col-2 my-4" ng-repeat="comic in comics">
+
+			<img ng-src="{{ comic.thumbnail.url }}" class="img-thumbnail" alt="{{ comic.title }}">
+			<p>{{ comic.title }}</p>
+
+		</div>
+
+	</div>
+
+
+</div>

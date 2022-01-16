@@ -23,10 +23,9 @@ appMarvel.config(function ($routeProvider) {
 			resolve: {
 				characters: function (apiService) {
 
-					const page = sessionStorage.getItem('page') || undefined;
+					const offset = sessionStorage.getItem('offset') || undefined;
 
-					return apiService.get('characters', page);
-					// return {data: {results: []}};
+					return apiService.get('characters', offset);
 
 				}
 			}
@@ -37,8 +36,11 @@ appMarvel.config(function ($routeProvider) {
 			controller: "detailController",
 			resolve: {
 				character: function (apiService, $route) {
-					console.log($route.current.params.character);
-					// return apiService.get('character');
+
+					const offset = sessionStorage.getItem('offset') || undefined;
+
+					return apiService.get('characters/' + $route.current.params.character, offset);
+
 				}
 			}
 		}).otherwise({redirectTo: '/'});
